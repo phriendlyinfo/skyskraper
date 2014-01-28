@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+var fs = require('fs')
+  , nopt = require('nopt')
+  , Path = require('path')
+  , skyskraper = require(Path.join(__dirname, '..'));
+
+var options = (function(){
+  var options = {
+    date: String,
+    apikey: String,
+    output: String
+  }
+  var aliases = {
+    k: '--apikey',
+    d: '--date',
+    o: '--output'
+  }
+  return nopt(options, aliases, process.argv);
+}.call());
+
+skyskraper.scrape(options.date, {pnetApikey: options.apikey}, function(err, shows){
+  if (null != err) {
+    console.log(err.message);
+    process.exit(1);
+  }
+
+  var formattedShows = JSON.stringify(shows, null, 4);
+
+  if (null != options.output)
+    fs.writeFileSync(options.output, formattedShows);
+  else
+    console.log(formattedShows);
+
+  process.exit(0);
+});
