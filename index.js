@@ -59,13 +59,13 @@ function formatShow(rawshow){
     },
     venue: {
       name: rawshow.venue,
-      notes: rawshow.venuenotes,
       location: {
         city: rawshow.city,
         country: rawshow.country,
         state: rawshow.state
       },
       pnet: {
+        notes: rawshow.venuenotes,
         venueId: +rawshow.venueid
       }
     }
