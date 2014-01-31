@@ -52,8 +52,8 @@ function formatShow(rawshow){
     footnotes: rawshow.footnotes,
     pnet: {
       artistId: +rawshow.artist,
-      meta: rawshow.meta,
-      setlistNotes: rawshow.setlistnotes,
+      meta: nullIfEmptyString(rawshow.meta),
+      setlistNotes: nullIfEmptyString(rawshow.setlistnotes),
       showId: +rawshow.showid,
       url: rawshow.url
     },
@@ -65,7 +65,7 @@ function formatShow(rawshow){
         state: rawshow.state
       },
       pnet: {
-        notes: rawshow.venuenotes,
+        notes: nullIfEmptyString(rawshow.venuenotes),
         venueId: +rawshow.venueid
       }
     }
@@ -81,4 +81,12 @@ function formatSongs(sets){
       }, {pnet: {}});
     });
   });
+}
+
+function nullIfEmptyString(str){
+  return isBlank(str) ? null : str;
+}
+
+function isBlank(str){
+  return null == str || !/\S+/.test(str);
 }
