@@ -76,7 +76,7 @@ function formatSongs(sets){
   return sets.map(function(set){
     return set.map(function(song){
       return keys(song).reduce(function(memo, key){
-        'url' !== key ? memo[key] = song[key] : memo.pnet[key] = song[key];
+        ('url' !== key ? memo : memo.pnet)[key] = song[key];
         return memo;
       }, {pnet: {}});
     });
