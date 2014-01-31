@@ -51,9 +51,9 @@ function formatShow(rawshow){
     sets: formatSongs(rawshow.sets),
     encores: formatSongs(rawshow.encores),
     footnotes: rawshow.footnotes,
-    meta: rawshow.meta,
     pnet: {
       artistId: +rawshow.artist,
+      meta: rawshow.meta,
       showId: +rawshow.showid,
       url: rawshow.url
     },
