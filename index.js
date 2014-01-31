@@ -47,13 +47,13 @@ function formatShow(rawshow){
     year: +rawshow.showyear,
     humanDate: rawshow.nicedate,
     friendlyDate: rawshow.mmddyy,
-    setlistNotes: rawshow.setlistnotes,
     sets: formatSongs(rawshow.sets),
     encores: formatSongs(rawshow.encores),
     footnotes: rawshow.footnotes,
     pnet: {
       artistId: +rawshow.artist,
       meta: rawshow.meta,
+      setlistNotes: rawshow.setlistnotes,
       showId: +rawshow.showid,
       url: rawshow.url
     },
