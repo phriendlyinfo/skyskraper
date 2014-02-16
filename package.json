@@ -36,7 +36,7 @@
 
   , "bin":
     {
-        "pnet": "./bin/sskr"
+        "sskr": "./bin/sskr"
     }
 
   , "main": "index.js"
