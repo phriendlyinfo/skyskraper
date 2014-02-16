@@ -1,6 +1,6 @@
 {
     "name": "skyskraper"
-  , "version": "0.0.2-dev"
+  , "version": "0.0.1"
   , "description": "Module to scrape and reformat data from the Phish.net API into a more usable JSON format"
   , "author": "benjreinhart"
   , "engines":
