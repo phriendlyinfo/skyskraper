@@ -21,6 +21,11 @@ var options = (function(){
   return nopt(options, aliases, process.argv);
 }.call());
 
+if (options.help) {
+  console.log(fs.readFileSync(Path.join(__dirname, 'help.txt'), {encoding: 'utf8'}));
+  process.exit(0);
+}
+
 var method = options.argv.remain[0]
   , opts = {pnetApikey: options.apikey};
 
