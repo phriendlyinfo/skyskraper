@@ -34,6 +34,11 @@
         "url": "https://github.com/phriendlyinfo/skyskraper/issues"
     }
 
+  , "bin":
+    {
+        "pnet": "./bin/sskr"
+    }
+
   , "main": "index.js"
 
   , "homepage": "https://github.com/phriendlyinfo/skyskraper"
