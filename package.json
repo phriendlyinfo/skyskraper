@@ -16,6 +16,9 @@
 
   , "devDependencies":
     {
+        "chai": "~1.9"
+      , "mocha": "~1.17"
+      , "sinon": "~1.8"
     }
 
   , "repository":
