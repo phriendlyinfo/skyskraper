@@ -7,21 +7,43 @@ var fs = require('fs')
 
 var options = (function(){
   var options = {
-    date: String,
     apikey: String,
-    output: String
+    date: String,
+    from: String,
+    output: String,
+    to: String
   }
   var aliases = {
-    k: '--apikey',
     d: '--date',
+    k: '--apikey',
     o: '--output'
   }
   return nopt(options, aliases, process.argv);
 }.call());
 
-skyskraper.scrape(options.date, {pnetApikey: options.apikey}, function(err, shows){
+var method = options.argv.remain[0]
+  , opts = {pnetApikey: options.apikey};
+
+if (null != options.to) {
+  opts.to = options.to;
+}
+
+if (null != options.from) {
+  opts.from = options.from;
+}
+
+if ('scrape' === method)
+  skyskraper.scrape(options.date, opts, callback);
+else if ('bulkScrape' === method)
+  skyskraper.bulkScrape(opts, callback)
+else {
+  console.error("method must be a valid skyskraper method, either `scrape` or `bulkScrape`");
+  process.exit(1);
+}
+
+function callback(err, shows){
   if (null != err) {
-    console.log(err.message);
+    console.error(err.message);
     process.exit(1);
   }
 
@@ -33,4 +55,4 @@ skyskraper.scrape(options.date, {pnetApikey: options.apikey}, function(err, show
     console.log(formattedShows);
 
   process.exit(0);
-});
+}
