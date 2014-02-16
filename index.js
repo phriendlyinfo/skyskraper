@@ -1,9 +1,61 @@
-var pnet = require('pnet')
-  , keys = Object.keys;
+var async = require('async')
+  , keys = Object.keys
+  , pnet = require('pnet')
+  , showFinder = require('show-finder');
 
 var PNET_SETLIST_METHOD = 'shows.setlists.get';
 
-exports.scrape = function(date, options, cb){
+var Skyskraper = module.exports = {};
+
+Skyskraper.bulkScrape = function(options, cb){
+  var apikey = options.pnetApikey;
+
+  if (null == apikey) {
+    process.nextTick(cb.bind(null, new Error('pnetApikey option is required')));
+    return
+  }
+
+  showFinder.find(options, function(err, shows){
+    if (null != err)
+      return cb(err);
+
+    var years = Object.keys(shows);
+
+    if (years.length === 0)
+      return cb(null, {});
+
+    var requests = years.reduce(function(memo, year){
+      shows[year].forEach(function(show){
+        memo[show.showdate] = function(cb) {
+          Skyskraper.scrape(show.showdate, {pnetApikey: apikey}, cb);
+        }
+      });
+      return memo;
+    }, {});
+
+    async.parallel(requests, function(err, results){
+      if (null != err)
+        return cb(err);
+
+      var groupedByYear = Object.keys(results).reduce(function(memo, showDate){
+        var year = showDate.slice(0, 4);
+        memo[year] = (memo[year] || []).concat(results[showDate]);
+        return memo;
+      }, {});
+
+      var sorted = Object.keys(groupedByYear).reduce(function(memo, year){
+        memo[year] = groupedByYear[year].sort(function(show1, show2){
+          return makeDate(show1.date) > makeDate(show2.date);
+        });
+        return memo;
+      }, {});
+
+      cb(null, sorted);
+    });
+  });
+}
+
+Skyskraper.scrape = function(date, options, cb){
   var apikey = options.pnetApikey;
 
   if (null == apikey) {
@@ -25,6 +77,13 @@ function getShowsForDate(date, apikey, cb){
   });
 }
 
+function makeDate(date) {
+  var parts = date.split('-')
+    , year = +parts[0]
+    , month = +parts[1]
+    , day = +parts[2];
+  return new Date(year, month - 1, day);
+}
 
 /**
  * Shuffle around attributes from the Phish.net API setlist response.

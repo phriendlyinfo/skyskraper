@@ -1,0 +1,286 @@
+[
+    {
+        "artist": "Phish",
+        "date": "2013-10-31",
+        "year": 2013,
+        "humanDate": "October 31, 2013",
+        "friendlyDate": "10/31/2013",
+        "sets": [
+            [
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/heavy-things"
+                    },
+                    "id": "heavy-things",
+                    "title": "Heavy Things"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/the-moma-dance"
+                    },
+                    "id": "the-moma-dance",
+                    "title": "The Moma Dance",
+                    "segue": ">"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/poor-heart"
+                    },
+                    "id": "poor-heart",
+                    "title": "Poor Heart",
+                    "segue": ">"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/back-on-the-train"
+                    },
+                    "id": "back-on-the-train",
+                    "title": "Back on the Train",
+                    "segue": ">"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/silent-in-the-morning"
+                    },
+                    "id": "silent-in-the-morning",
+                    "title": "Silent in the Morning"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/kill-devil-falls"
+                    },
+                    "id": "kill-devil-falls",
+                    "title": "Kill Devil Falls"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/mound"
+                    },
+                    "id": "mound",
+                    "title": "Mound"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/free"
+                    },
+                    "id": "free",
+                    "title": "Free",
+                    "segue": ">"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/camel-walk"
+                    },
+                    "id": "camel-walk",
+                    "title": "Camel Walk"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/stash"
+                    },
+                    "id": "stash",
+                    "title": "Stash"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/golgi-apparatus"
+                    },
+                    "id": "golgi-apparatus",
+                    "title": "Golgi Apparatus",
+                    "segue": ">"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/bathtub-gin"
+                    },
+                    "id": "bathtub-gin",
+                    "title": "Bathtub Gin"
+                }
+            ],
+            [
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/wingsuit"
+                    },
+                    "id": "wingsuit",
+                    "title": "Wingsuit",
+                    "notes": "[1]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/fuego"
+                    },
+                    "id": "fuego",
+                    "title": "Fuego",
+                    "notes": "[2]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/the-line"
+                    },
+                    "id": "the-line",
+                    "title": "The Line",
+                    "notes": "[2]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/monica"
+                    },
+                    "id": "monica",
+                    "title": "Monica",
+                    "notes": "[3]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/waiting-all-night"
+                    },
+                    "id": "waiting-all-night",
+                    "title": "Waiting All Night",
+                    "notes": "[2]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/wombat"
+                    },
+                    "id": "wombat",
+                    "title": "Wombat",
+                    "notes": "[4]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/snow"
+                    },
+                    "id": "snow",
+                    "title": "Snow",
+                    "notes": "[3]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/devotion-to-a-dream"
+                    },
+                    "id": "devotion-to-a-dream",
+                    "title": "Devotion To A Dream",
+                    "notes": "[2]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/555"
+                    },
+                    "id": "555",
+                    "title": "555",
+                    "segue": ">",
+                    "notes": "[2]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/winterqueen"
+                    },
+                    "id": "winterqueen",
+                    "title": "Winterqueen",
+                    "notes": "[5]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/amidst-the-peals-of-laughter"
+                    },
+                    "id": "amidst-the-peals-of-laughter",
+                    "title": "Amidst the Peals of Laughter",
+                    "notes": "[3]"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/you-never-know"
+                    },
+                    "id": "you-never-know",
+                    "title": "You Never Know",
+                    "notes": "[2]"
+                }
+            ],
+            [
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/ghost"
+                    },
+                    "id": "ghost",
+                    "title": "Ghost",
+                    "segue": ">"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/carini"
+                    },
+                    "id": "carini",
+                    "title": "Carini"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/birds-of-a-feather"
+                    },
+                    "id": "birds-of-a-feather",
+                    "title": "Birds of a Feather"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/harry-hood"
+                    },
+                    "id": "harry-hood",
+                    "title": "Harry Hood",
+                    "segue": ">"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/bug"
+                    },
+                    "id": "bug",
+                    "title": "Bug"
+                },
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/run-like-an-antelope"
+                    },
+                    "id": "run-like-an-antelope",
+                    "title": "Run Like an Antelope",
+                    "notes": "[6]"
+                }
+            ]
+        ],
+        "encores": [
+            [
+                {
+                    "pnet": {
+                        "url": "http://phish.net/song/quinn-the-eskimo"
+                    },
+                    "id": "quinn-the-eskimo",
+                    "title": "Quinn the Eskimo"
+                }
+            ]
+        ],
+        "footnotes": [
+            "[1] Debut. Ended with Mike on power drill.",
+            "[2] Debut.",
+            "[3] Debut; Acoustic.",
+            "[4] Debut; with Abe Vigoda and the Abe Vigoda Dancers.",
+            "[5] Phish debut.",
+            "[6] Abe Vigoda Dancers reference."
+        ],
+        "pnet": {
+            "artistId": 1,
+            "meta": null,
+            "setlistNotes": "This show was&nbsp;webcast via&nbsp;<a href=\"http://www.livephish.com/phish/Hampton-2013-Webcast.asp\">LivePhish</a>.&nbsp;Breaking with tradition, Phish donned a musical costume &quot;from the future,&quot; a yet to be recorded album that will apparently be entitled, <em>Wingsuit</em>. All of the songs in the second set were debuts other than Winterqueen, which was played by TAB on <a href=\"http://phish.net/sideshows/trey-anastasio-band/?d=2011-10-01\">October 1, 2011</a>. Wingsuit ended with Mike on power drill.&nbsp;Monica, Snow and Amidst the Peals of Laughter were all performed acoustic, and Amidst the Peals of Laughter was performed as a Page and Trey duet. Wombat featured the dance stylings of Abe Vigoda and the Abe Vigoda Dancers. Antelope also featured an&nbsp;Abe Vigoda Dancers reference. After the second set concluded, a short parody video of scenes from <em>The Godfather </em>was played featuring Abe Vigoda and the members and crew of Phish.",
+            "showId": 1374684620,
+            "url": "http://phish.net/setlists/?d=2013-10-31"
+        },
+        "venue": {
+            "name": "Boardwalk Hall",
+            "location": {
+                "city": "Atlantic City",
+                "country": "USA",
+                "state": "NJ"
+            },
+            "pnet": {
+                "notes": null,
+                "venueId": 777
+            }
+        }
+    }
+]

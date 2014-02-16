@@ -10,8 +10,10 @@
 
   , "dependencies":
     {
-        "nopt": "~2.1.2"
-      , "pnet": "~0.1.1"
+        "async": "~0.2"
+      , "nopt": "~2.1"
+      , "pnet": "~0.1"
+      , "show-finder": ">=0.0.3"
     }
 
   , "devDependencies":
