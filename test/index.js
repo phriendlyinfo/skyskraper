@@ -5,7 +5,21 @@ var expect = require('chai').expect
   , skyskraper = require('../');
 
 describe('skyskraper', function(){
+  afterEach(function(){
+    'function' === typeof pnet.get.restore && pnet.get.restore()
+  });
+
   describe('scrape', function(){
+    it('errors out if a pnetApikey option is not provided', function(done){
+      var stub = sinon.stub(pnet, 'get');
+
+      skyskraper.scrape('2013-10-31', {}, function(err, shows){
+        expect(err).to.be.instanceOf(Error);
+        expect(err.message).to.equal('pnetApikey option is required');
+        done();
+      });
+    });
+
     it('queries a given show and returns a formatted response', function(done){
       sinon.stub(pnet, 'get', function(method, options, cb){
         expect(method).to.equal('shows.setlists.get');
