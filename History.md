@@ -1,3 +1,10 @@
+0.0.4 / 2014-02-16
+==================
+
+* Correct date sorting implementation
+* Added version option to CLI
+
+
 0.0.3 / 2014-02-16
 ==================
 
