@@ -44,9 +44,7 @@ Skyskraper.bulkScrape = function(options, cb){
       }, {});
 
       var sorted = Object.keys(groupedByYear).reduce(function(memo, year){
-        memo[year] = groupedByYear[year].sort(function(show1, show2){
-          return makeDate(show1.date) > makeDate(show2.date);
-        });
+        memo[year] = groupedByYear[year].sort(sortShows);
         return memo;
       }, {});
 
@@ -75,6 +73,15 @@ function getShowsForDate(date, apikey, cb){
     else
       cb(null, shows.map(formatShow));
   });
+}
+
+function sortShows(show1, show2) {
+  var date1 = makeDate(show1.date)
+    , date2 = makeDate(show2.date);
+
+  if (date1 > date2) return 1;
+  if (date1 < date2) return -1;
+  return 0;
 }
 
 function makeDate(date) {
