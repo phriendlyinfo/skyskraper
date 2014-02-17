@@ -29,6 +29,7 @@ sskr bulkScrape --from 2010-06 --to 2012-09 -k 123 -o ~/Desktop/halloween-2013.j
                         with the `bulkScrape` method
 
 --help                  Display this message and exit
+--version               Display the current version and exit
 ```
 
 ## LICENSE
